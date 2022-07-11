@@ -1,0 +1,34 @@
+@import url("./utils/padding.css");
+@import url("./utils/margin.css");
+@import url("./utils/frosted.css");
+@import url("./utils/corners.css");
+@import url("./utils/ui-animations.css");
+@import url("./utils/visibility.css");
+
+* {
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+}
+
+body.debug {
+  border: 5px solid red;
+  box-sizing: border-box;
+}
+
+#ws-id {
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: fadeOut 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}

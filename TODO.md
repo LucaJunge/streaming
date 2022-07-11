@@ -1,0 +1,5 @@
+- Get Control and Live to interact via a websocket
+- define types of interaction
+  - movement
+  - contentupdate
+  - ...
