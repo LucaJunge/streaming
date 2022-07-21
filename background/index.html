@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .bg-primary {
+        background-color: #4c0026;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translate(0px, 0px);
+        }
+        100% {
+          transform: translate(1920px, 1080px);
+        }
+      }
+
+      .scrolling-background {
+        width: 75px;
+        height: 75px;
+        background-image: url("logo.svg");
+        background-size: 75px 75px;
+        background-repeat: repeat;
+        animation: scroll 15s linear infinite;
+      }
+    </style>
+  </head>
+  <body class="scrolling-background-container">
+    <div class="scrolling-background"></div>
+  </body>
+</html>
