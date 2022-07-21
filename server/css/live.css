@@ -26,9 +26,10 @@ body.debug {
   position: absolute;
   top: 0;
   right: 0;
-  animation: fadeOut 0.5s;
+  border-radius: 0.4em;
+  /*animation: fadeOut 0.5s;
   animation-timing-function: ease-in-out;
   animation-delay: 2s;
   animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards;*/
 }

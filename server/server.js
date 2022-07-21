@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 // LIVE VIEW
 app.get("/live", (req, res) => {
-  res.render("live", { title: "🎙️🔴 LIVE", isDebug: false })
+  res.render("live", { title: "🎙️🔴 LIVE", isDebug: true })
 })
 
 wss.on("connection", (ws) => {
