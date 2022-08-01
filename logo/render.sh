@@ -1,12 +1,24 @@
 #!/bin/bash
-logoSizes=(16 32 128 256 500 512 1000 1024 2048)
 
-mkdir -p "sizes"
+logo_sizes=(16 32 128 256 512 1024 2048)
+variants=("logo_base" "logo_base_inverted" "logo_muted"  "logo_muted_inverted")
 
-for size in ${logoSizes[@]}; do
-  inkscape "logo.svg" \
-  --export-width=$size \
-  --export-type=png \
-  --export-filename="./sizes/logo_$size.png"
-  echo "Rendered logo with ${size}x${size}"
+# Create main folder for variants
+mkdir -p "variants"
+
+# Create folders for sizes and variants
+for variant in ${variants[@]}; do
+  mkdir -p "variants/$variant"
+done
+
+#Create png for every variant in every size
+for variant in ${variants[@]}; do
+  for size in ${logo_sizes[@]}; do
+    inkscape "logo.svg" \
+    --export-width="$size" \
+    --export-type="png" \
+    --export-id="$variant" \
+    --export-filename=- > "variants/${variant}/${variant}_${size}x${size}.png"
+    echo "Rendered $variant (${size}x${size})"
+  done
 done
